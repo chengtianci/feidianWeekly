@@ -8,16 +8,16 @@ $contentColor: #ffffff;
 
 #main {
     width: 1200px;
-    height: $MidHeight;
+    height: 1500px;
     margin: 0 auto;
-    margin-top: $MarginTop;
+    margin-top: 80px;
 }
 
 #index {
     width: 240px;
     height: 500px;
-    background-color: $contentColor;
-    margin-top: $MarginTop / 2;
+    background-color: #ffffff;
+    margin-top: 40px;
     float: left;
     padding-left: 30px;
     padding-right: 30px;
@@ -47,12 +47,12 @@ $contentColor: #ffffff;
     height: 850px;
 
     // background-color: pink;
-    margin-top: $MarginTop / 2;
+    margin-top: 40px;
     margin-right: 100px;
     float: left;
 
     ul li {
-        background-color: $contentColor;
+        background-color: #ffffff;
         margin-bottom: 25px;
         padding: 15px 30px;
          box-sizing: border-box;

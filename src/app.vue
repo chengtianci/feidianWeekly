@@ -1,12 +1,10 @@
 <template>
 	<div>
-		app app
+		<router-view></router-view>
 	</div>
 </template>
 
 <script>
-	import './styles/iconfont.css';
-
 	export default {
 		data() {
 			return {
