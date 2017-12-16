@@ -4,7 +4,9 @@
             <fd-header></fd-header>
         </div>
         <div class="wrapper-container">
-            <slot></slot>  
+            <div class="container">
+                <slot></slot>  
+            </div>
         </div>
         <div class="wrapper-footer">
             <fd-footer></fd-footer>
@@ -14,7 +16,7 @@
 <script>
 import fdHeader from './header.vue';
 import fdFooter from './footer.vue';
-import '../styles/base.scss';
+import '../styles/base.css';
 import '../styles/iconfont.css';
 
 export default {
@@ -29,3 +31,20 @@ export default {
     }
 }
 </script>
+
+<style>
+.wrapper {
+    .wrapper-container {
+        width: 100%;
+        
+        .container {
+            width: 70%;
+            margin: 0 auto;
+            padding-top: 40px;
+            box-sizing: border-box;
+
+        }
+    }
+}
+</style>
+

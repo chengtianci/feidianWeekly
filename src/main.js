@@ -1,10 +1,13 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 
 import routes from './routes.js';
 import App from './app';
 
 Vue.use(VueRouter);
+Vue.use(VueAxios, axios);
 
 const RouterConfig = {
 	// mode: 'history',

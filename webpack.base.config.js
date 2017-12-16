@@ -24,19 +24,37 @@ module.exports = {
                 loader: 'babel-loader'
             },
             { 
-            	test: /\.css$/, 
-            	use: ExtractTextPlugin.extract({
-            		fallback: 'style-loader',
-            		use: ['css-loader']
-            	})
+            	test: /\.(css|scss)$/, 
+            	// use: ExtractTextPlugin.extract({
+            	// 	fallback: 'style-loader',
+                //     use: ['css-loader', 'autoprefixer-loader']
+                // })
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: [
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                importLoaders: 1,
+                                sourceMap: true
+                            }
+                        },
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                sourceMap: true
+                            }
+                        }
+                    ]
+                })
             },
-            {
-            	test: /\.scss$/,
-            	use: ExtractTextPlugin.extract({
-			        fallback: 'style-loader',
-			        use: ['css-loader', 'sass-loader']
-			    })
-            },
+            // {
+            // 	test: /\.scss$/,
+            // 	use: ExtractTextPlugin.extract({
+			//         fallback: 'style-loader',
+            //         use: ['css-loader', 'autoprefixer-loader', 'sass-loader']
+			//     })
+            // },
             { 
             	test: /\.(png|jpg|gif|svg)$/, 
             	use: [
@@ -55,7 +73,10 @@ module.exports = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin('styles.css'),
+        new ExtractTextPlugin({
+            filename: 'bundle.css',
+            allChunks: true
+        }),
         new webpack.optimize.CommonsChunkPlugin({
         	name: 'vendors',
         	filename: 'vendors.js'

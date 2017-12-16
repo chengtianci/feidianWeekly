@@ -1,0 +1,29 @@
+$MidHeight: 1500px;
+$MarginTop: 80px;
+$fontcolor: #50a1f7;
+
+$headcolor: #272727;
+
+$contentColor: #ffffff;
+
+.home {
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+    display: flex;
+    justify-content: space-between;
+
+
+
+    .content {
+        width: 75%;
+        height: auto;
+    }
+
+}
+
+
+
+
+
+
