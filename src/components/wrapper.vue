@@ -38,7 +38,7 @@ export default {
         width: 100%;
         
         .container {
-            width: 70%;
+            width: 65%;
             margin: 0 auto;
             padding-top: 40px;
             box-sizing: border-box;

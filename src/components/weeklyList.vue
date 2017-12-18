@@ -38,7 +38,8 @@ export default {
         flex-wrap: wrap;
         justify-content: center;
         margin-top: 10px;
-        color: $fontcolor;
+        color: #333;
+        font-weight: 400;
         padding-bottom: 10px;
         border-bottom: 1px solid #999;
     }

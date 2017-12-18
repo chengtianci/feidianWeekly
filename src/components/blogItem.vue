@@ -10,7 +10,7 @@
             <p>世事茫茫，光阴有限，算来何必奔忙？人生碌碌，竞短论长，却不道荣枯有数，得失难量。看那秋风金谷，夜月乌江，阿房宫冷，铜雀台荒，荣华花上露，富贵草头霜。机关参透，万虑皆忘，夸什么龙楼凤阁，说什么利锁名僵。闲来静处，且将诗酒猖狂，唱一曲归来未晚，歌一调湖海茫茫。逢时遇景，拾翠寻芳。</p>
         </div>
         <div class="blog-item-tags">
-            <span class="title">标签</span>
+            <span class="title iconfont icon-tag"></span>
             <router-link to="/category" class="blog-item-tag">标签一</router-link>
             <router-link to="/category" class="blog-item-tag">标签二</router-link>
             <router-link to="/category" class="blog-item-tag">标签三</router-link>
@@ -91,10 +91,15 @@ export default {
     .blog-item-tags {
         height: 40px;
         line-height: 40px;
+        display: flex;
+        align-items: center;
 
         .title {
             display: inline-block;
             margin-right: 15px;
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: #666;
         }
 
         .blog-item-tag {
@@ -102,10 +107,10 @@ export default {
             box-sizing: border-box;
             height: 24px;
             line-height: 24px;
-            border-radius: 24px;
+            border-radius: 22px;
             padding: 0 10px 0 10px;
             margin: 0 5px 0 5px;
-            font-size: 0.6em;
+            font-size: 0.5rem;
             border: 1px solid #999;
             color: #666;
         }

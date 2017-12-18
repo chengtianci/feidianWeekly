@@ -7,7 +7,7 @@ module.exports = merge(base, {
     devtool: 'inline-source-map',
     devServer: {
         host: 'localhost',
-        port: 8000,
+        port: 8001,
         contentBase: './',
         // proxy: [{
         //     context: ["/api"],
