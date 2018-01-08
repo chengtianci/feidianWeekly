@@ -23,7 +23,7 @@
 		</nav>
 		<header class="header" @mousemove="activeMove($event)" @mouseleave="activeClear()" @mouseenter="activeInit()">
 			<div class="header-wrapper" ref="header-wrapper">
-				<div class="logo"><img src="../../static/images/logo.png"></div>
+				<div class="logo"><img src="../static/images/logo.png"></div>
 				<p>沸腾的心，飞扬的梦；点滴积累，共码未来</p>
 				<p>WRITE THE CODE,CHANGE THE WORLD</p>
 			</div>

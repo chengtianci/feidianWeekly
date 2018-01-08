@@ -7,12 +7,8 @@ module.exports = merge(base, {
     devtool: 'inline-source-map',
     devServer: {
         host: 'localhost',
-        port: 8001,
-        contentBase: './',
-        // proxy: [{
-        //     context: ["/api"],
-        //     target: "http://localhost:8080"
-        // }]
+        port: 8000,
+        contentBase: './dist',
     },
     plugins: [
         new webpack.NamedModulesPlugin(),

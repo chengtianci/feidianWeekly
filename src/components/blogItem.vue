@@ -2,7 +2,7 @@
     <li class="blog-item">
         <router-link to="/blog" class="blog-item-url">文章标题文章标题文章标题文章标题文章标题</router-link>
         <div class="blog-item-author">
-            <img class="blog-item-author-img" src="../../static/images/20160921_IMG_2989.jpg">
+            <img class="blog-item-author-img" src="../static/images/20160921_IMG_2989.jpg">
             <span class="blog-item-author-name">作者1</span>
             <span class="blog-item-author-date">2017-10-20</span>
         </div>

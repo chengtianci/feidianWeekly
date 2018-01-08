@@ -4,7 +4,7 @@
             <div class="weekly-container">
                 <div class="weekly-guide">
                     <div class="weekly-image">
-                        <img src="../../static/images/weekly.jpg" alt="周刊图片">
+                        <img src="../static/images/weekly.jpg" alt="周刊图片">
                     </div>
                     <div class="weekly-info">
                         <h2 class="weekly-info-title">沸点周刊 * 第一期</h2>

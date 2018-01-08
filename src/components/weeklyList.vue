@@ -2,7 +2,7 @@
     <div class="weekly-list-nav">
         <h2 class="title">周刊列表</h2>
         <ul>
-            <li v-for="i in [1,2,3,4,5,6,7,8,9]" class="weekly-item">
+            <li v-for="i in [1,2,3,4,5,6,7,8,9]" class="weekly-item" :key="i">
                 <router-link to="/weekly">
                     <span class="weekly-item-name">沸点周刊第1期</span>
                     <span class="weekly-item-date">2017-12-12</span>

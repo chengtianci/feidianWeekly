@@ -10,7 +10,8 @@ module.exports = {
     	vendors: './src/vendors'
     },
     output: {
-        path: path.join(__dirname, 'dist'),
+        publicPath: '/assets/', // 文件路径
+        path: path.join(__dirname, 'dist/assets'), // 打包路径
         filename: '[name].bundle.js'
     },
     module: {
@@ -25,10 +26,6 @@ module.exports = {
             },
             { 
             	test: /\.(css|scss)$/, 
-            	// use: ExtractTextPlugin.extract({
-            	// 	fallback: 'style-loader',
-                //     use: ['css-loader', 'autoprefixer-loader']
-                // })
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: [
@@ -48,13 +45,6 @@ module.exports = {
                     ]
                 })
             },
-            // {
-            // 	test: /\.scss$/,
-            // 	use: ExtractTextPlugin.extract({
-			//         fallback: 'style-loader',
-            //         use: ['css-loader', 'autoprefixer-loader', 'sass-loader']
-			//     })
-            // },
             { 
             	test: /\.(png|jpg|gif|svg)$/, 
             	use: [
@@ -82,7 +72,10 @@ module.exports = {
         	filename: 'vendors.js'
         }),
     	new HtmlWebpackPlugin({
-    		template: './src/index.html'
+            title: 'feidianWeekly',
+            filename: '../index.html',
+            template: './src/template/index.ejs',
+            inject: true,
     	}),
     ],
     resolve: {
