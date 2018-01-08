@@ -6,30 +6,18 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry: {
-        vendors: './src/vendors',
-    	app: './src/app',
-        admin: './src/admin'
+    	main: './src/main',
+    	vendors: './src/vendors'
     },
     output: {
-        publicPath: '/assets/',
-        path: path.join(__dirname, 'dist/assets'), // 打包路径
+        path: path.join(__dirname, 'dist'),
         filename: '[name].bundle.js'
     },
     module: {
         rules: [
             {
                 test: /\.vue$/,
-                use: [
-                    {
-                        loader: 'vue-loader'
-                    },
-                    {
-                        loader: 'iview-loader',
-                        options: {
-                            prefix: false
-                        }
-                    }
-                ]
+                use: ['vue-loader']
             },
             {
                 test: /\.js$/,
@@ -37,6 +25,10 @@ module.exports = {
             },
             { 
             	test: /\.(css|scss)$/, 
+            	// use: ExtractTextPlugin.extract({
+            	// 	fallback: 'style-loader',
+                //     use: ['css-loader', 'autoprefixer-loader']
+                // })
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: [
@@ -56,6 +48,13 @@ module.exports = {
                     ]
                 })
             },
+            // {
+            // 	test: /\.scss$/,
+            // 	use: ExtractTextPlugin.extract({
+			//         fallback: 'style-loader',
+            //         use: ['css-loader', 'autoprefixer-loader', 'sass-loader']
+			//     })
+            // },
             { 
             	test: /\.(png|jpg|gif|svg)$/, 
             	use: [
@@ -80,22 +79,11 @@ module.exports = {
         }),
         new webpack.optimize.CommonsChunkPlugin({
         	name: 'vendors',
-        	filename: 'vendors.bundle.js'
+        	filename: 'vendors.js'
         }),
     	new HtmlWebpackPlugin({
-            title: 'feidianWeekly',
-            filename: '../index.html',
-            template: './src/template/index.ejs',
-            inject: true,
-            chunks: ['vendors', 'app']
-        }),
-        new HtmlWebpackPlugin({
-            title: 'feidianWeekly admin',
-            filename: '../admin.html',
-            template: './src/template/admin.ejs',
-            inject: true,
-            chunks: ['vendors', 'admin']
-    	})
+    		template: './src/index.html'
+    	}),
     ],
     resolve: {
         extensions: ['.js', '.vue'],

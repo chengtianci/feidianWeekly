@@ -13,7 +13,7 @@
 		},
 
 		created() {
-			console.log("999")
+			console.log("Asd")
 		}
 	}
 </script>

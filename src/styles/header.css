@@ -51,7 +51,7 @@
         height: 50px;
         margin: 0 10px;
         // opacity: 0.5;
-        background: url(../static/images/home.png) no-repeat;
+        background: url(../../static/images/home.png) no-repeat;
         background-color:pink;
     }
 }

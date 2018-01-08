@@ -4,10 +4,6 @@ module.exports = {
     },
     plugins: [
         require('precss'),
-        require('postcss-cssnext'),
-        require('postcss-import'),
-        require('cssnano')({
-            preset: 'default',
-        }),
+        require('postcss-cssnext')
     ]
 }
