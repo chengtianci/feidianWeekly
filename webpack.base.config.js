@@ -25,7 +25,7 @@ module.exports = {
                 loader: 'babel-loader'
             },
             { 
-            	test: /\.(css|scss)$/, 
+            	test: /\.(css|scss|less)$/, 
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: [
@@ -81,6 +81,7 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.vue'],
         alias: {
+            '@': path.join(__dirname, './src'),
             'vue': 'vue/dist/vue.esm.js'
         }
     }
