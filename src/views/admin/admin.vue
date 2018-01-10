@@ -14,6 +14,33 @@
         left: 0;
         top: 0;
         z-index: 100;
+        overflow: auto;
+
+        &::-webkit-scrollbar-track {
+            border: 0px;
+            background-color: transparent;
+            margin-top: 0px;
+            margin-left: 10px;
+        }
+
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #aaa;	
+            border-radius: 3px;
+        }
+
+
+        .logo-con {
+            padding: 8px;
+            text-align: center;
+            img {
+                height: 44px;
+                width: auto;
+            }
+        }
 
         .menu-item span{
             display: inline-block;
@@ -30,17 +57,6 @@
             vertical-align: middle;
             font-size: 16px;
         }
-
-        .collapsed-menu span{
-            width: 0px;
-            transition: width .2s ease;
-        }
-        .collapsed-menu i{
-            transform: translateX(5px);
-            transition: font-size .2s ease .2s, transform .2s ease .2s;
-            vertical-align: middle;
-            font-size: 22px;
-        }
     }
     
     .admin-main {
@@ -54,13 +70,28 @@
             background: #fff;
             box-shadow: 0 1px 1px rgba(0,0,0,.1);
             padding: 0;
+            position: relative;
 
             .menu-icon{
                 margin: 20px 20px 0;
                 transition: all .3s;
             }
-            .rotate-icon{
-                transform: rotate(-90deg);
+            
+            .header-crumb {
+                position: absolute;
+                left: 60px;
+                top: 0;
+                
+            }
+
+            .top-menu {
+                width: 150px;
+                height: 64px;
+                float: right;
+            }
+            .top-menu:after {
+                height: 0;
+                background: #fff;
             }
         }
         .single-page {
@@ -71,7 +102,7 @@
         }
     }
     .expend-main {
-        padding-left: 78px;
+        padding-left: 0;
     }
 
     .layout-logo-left{
@@ -83,31 +114,17 @@
     } 
 </style>
 
-
 <template>
     <Layout id="admin">
         <Sider ref="side1" class="sidebar-menu" hide-trigger collapsible
-         :collapsed-width="78" v-model="isCollapsed">
-            <Menu active-name="1-2" theme="dark" width="auto" :class="menuitemClasses">
-                <MenuItem name="1-1">
-                    <Icon type="ios-navigate"></Icon>
-                    <span>Option 1</span>
-                </MenuItem>
-                <MenuItem name="1-2">
-                    <Icon type="search"></Icon>
-                    <span>Option 2</span>
-                </MenuItem>
-                <MenuItem name="1-3">
-                    <Icon type="settings"></Icon>
-                    <span>Option 3</span>
-                </MenuItem>
-            </Menu>
+         :collapsed-width="0" v-model="isCollapsed">
+            <div class="logo-con">
+                <img src="https://iview.github.io/iview-admin/dist/9f35d093728efc834cf6f8b15fd17eea.jpg" style="">
+            </div>
+            <adminMenu></adminMenu>
         </Sider>
         <Layout :class="adminmainClassed">
-            <Header class="admin-header">
-                <Icon :class="rotateIcon" type="navicon-round" size="24"
-                        @click.native="collapsedSider"></Icon>
-            </Header>
+            <adminHeader :toggle="toggleSider"></adminHeader>
             <Content class="single-page">
                 <router-view></router-view>
             </Content>
@@ -118,13 +135,13 @@
 <script>
 
 
-import leftMenu from '@/components/admin/leftMenu.vue';
-import topMenu from '@/components/admin/topMenu.vue';
+import adminMenu from '@/components/admin/adminMenu.vue';
+import adminHeader from '@/components/admin/adminHeader.vue';
 
 export default {
     components: {
-        leftMenu,
-        topMenu
+        adminMenu,
+        adminHeader
     },
     data () {
         return {
@@ -132,18 +149,6 @@ export default {
         }
     },
     computed: {
-        rotateIcon () {
-            return [
-                'menu-icon',
-                this.isCollapsed ? 'rotate-icon' : ''
-            ];
-        },
-        menuitemClasses () {
-            return [
-                'menu-item',
-                this.isCollapsed ? 'collapsed-menu' : ''
-            ]
-        },
         adminmainClassed() {
             return [
                 'admin-main',
@@ -152,7 +157,7 @@ export default {
         }
     },
     methods: {
-        collapsedSider () {
+        toggleSider () {
             this.$refs.side1.toggleCollapse();
         }
     }
