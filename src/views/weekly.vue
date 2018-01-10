@@ -1,79 +1,3 @@
-<template>
-    <wrapper>
-        <div class="weekly">
-            <div class="weekly-container">
-                <div class="weekly-guide">
-                    <div class="weekly-image">
-                        <img src="../static/images/weekly.jpg" alt="周刊图片">
-                    </div>
-                    <div class="weekly-info">
-                        <h2 class="weekly-info-title">沸点周刊 * 第一期</h2>
-                        <p class="weekly-info-editor">编辑：某某某</p>
-                        <p class="weekly-info-authors">撰稿人：作者一、作者二</p>
-                        <p class="weekly-info-time">发布日期：2017年12月12日</p>
-                        <p class="weekly-info-desc">导言：内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
-                    </div>
-                </div>
-                <div class="weekly-content">
-                    <h2 class="mulu">Content</h2>
-                    <div class="weekly-content-section">
-                        <h2 class="section-name">前端开发</h2>
-                        <div class="section-item">
-                            <p class="section-item-name">
-                                <i class="iconfont icon-favor"></i> 
-                                <router-link to="/blog">名字名字名字名字名字名字名字名字名字</router-link>
-                            </p>
-                        </div>
-                        <div class="section-item">
-                            <p class="section-item-name">
-                                <i class="iconfont icon-favor"></i> 
-                                <router-link to="/blog">名字名字名字名字名字名字名字名字名字</router-link>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="weekly-content-section">
-                        <h2 class="section-name">设计模式</h2>
-                        <div class="section-item">
-                            <p class="section-item-name">
-                                <i class="iconfont icon-favor"></i> 
-                                <router-link to="/blog">名字名字名字名字名字名字名字名字名字</router-link>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="weekly-content-section">
-                        <h2 class="section-name">信息安全</h2>
-                        <div class="section-item">
-                            <p class="section-item-name">
-                                <router-link to="/blog"><i class="iconfont icon-favor"></i>名字名字名字名字名字名字名字名字名字</router-link>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <weeklyList></weeklyList>
-        </div>
-    </wrapper>
-</template>
-
-<script>
-import wrapper from '../components/wrapper.vue';
-import blogItem from '../components/blogItem.vue';
-import weeklyList from '../components/weeklyList.vue';
-
-export default {
-    components: {
-        wrapper,
-        blogItem,
-        weeklyList
-    },
-    data() {
-        return {
-            
-        }
-    }
-}
-</script>
 <style>
 .weekly {
     width: 100%;
@@ -181,4 +105,81 @@ export default {
     }
 }
 </style>
+
+<template>
+    <wrapper>
+        <div class="weekly">
+            <div class="weekly-container">
+                <div class="weekly-guide">
+                    <div class="weekly-image">
+                        <img src="../static/images/weekly.jpg" alt="周刊图片">
+                    </div>
+                    <div class="weekly-info">
+                        <h2 class="weekly-info-title">沸点周刊 * 第一期</h2>
+                        <p class="weekly-info-editor">编辑：某某某</p>
+                        <p class="weekly-info-authors">撰稿人：作者一、作者二</p>
+                        <p class="weekly-info-time">发布日期：2017年12月12日</p>
+                        <p class="weekly-info-desc">导言：内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                    </div>
+                </div>
+                <div class="weekly-content">
+                    <h2 class="mulu">Content</h2>
+                    <div class="weekly-content-section">
+                        <h2 class="section-name">前端开发</h2>
+                        <div class="section-item">
+                            <p class="section-item-name">
+                                <i class="iconfont icon-favor"></i> 
+                                <router-link to="/blog">名字名字名字名字名字名字名字名字名字</router-link>
+                            </p>
+                        </div>
+                        <div class="section-item">
+                            <p class="section-item-name">
+                                <i class="iconfont icon-favor"></i> 
+                                <router-link to="/blog">名字名字名字名字名字名字名字名字名字</router-link>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="weekly-content-section">
+                        <h2 class="section-name">设计模式</h2>
+                        <div class="section-item">
+                            <p class="section-item-name">
+                                <i class="iconfont icon-favor"></i> 
+                                <router-link to="/blog">名字名字名字名字名字名字名字名字名字</router-link>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="weekly-content-section">
+                        <h2 class="section-name">信息安全</h2>
+                        <div class="section-item">
+                            <p class="section-item-name">
+                                <router-link to="/blog"><i class="iconfont icon-favor"></i>名字名字名字名字名字名字名字名字名字</router-link>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <weeklyList></weeklyList>
+        </div>
+    </wrapper>
+</template>
+
+<script>
+import wrapper from '../components/wrapper.vue';
+import blogItem from '../components/blogItem.vue';
+import weeklyList from '../components/weeklyList.vue';
+
+export default {
+    components: {
+        wrapper,
+        blogItem,
+        weeklyList
+    },
+    data() {
+        return {
+            
+        }
+    }
+}
+</script>
 

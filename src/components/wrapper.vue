@@ -16,8 +16,6 @@
 <script>
 import fdHeader from './header.vue';
 import fdFooter from './footer.vue';
-import '../styles/base.css';
-import '../styles/iconfont.css';
 
 export default {
     components: {
@@ -32,7 +30,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+@import '../styles/base.css';
+@import '../styles/iconfont.css';
+
 .wrapper {
     .wrapper-container {
         width: 100%;

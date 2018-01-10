@@ -6,6 +6,7 @@ import VueAxios from 'vue-axios'
 import routes from './routes.js';
 import App from './app';
 
+
 Vue.use(VueRouter);
 Vue.use(VueAxios, axios);
 
@@ -16,7 +17,7 @@ const RouterConfig = {
 const router = new VueRouter(RouterConfig);
 
 new Vue({
-	el: '#app',
+	el: '#root',
 	router: router,
 	render: h => h(App)
 })

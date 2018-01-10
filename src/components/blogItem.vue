@@ -1,36 +1,4 @@
-<template>
-    <li class="blog-item">
-        <router-link to="/blog" class="blog-item-url">文章标题文章标题文章标题文章标题文章标题</router-link>
-        <div class="blog-item-author">
-            <img class="blog-item-author-img" src="../static/images/20160921_IMG_2989.jpg">
-            <span class="blog-item-author-name">作者1</span>
-            <span class="blog-item-author-date">2017-10-20</span>
-        </div>
-        <div class="blog-item-desc">
-            <p>世事茫茫，光阴有限，算来何必奔忙？人生碌碌，竞短论长，却不道荣枯有数，得失难量。看那秋风金谷，夜月乌江，阿房宫冷，铜雀台荒，荣华花上露，富贵草头霜。机关参透，万虑皆忘，夸什么龙楼凤阁，说什么利锁名僵。闲来静处，且将诗酒猖狂，唱一曲归来未晚，歌一调湖海茫茫。逢时遇景，拾翠寻芳。</p>
-        </div>
-        <div class="blog-item-tags">
-            <span class="title iconfont icon-tag"></span>
-            <router-link to="/category" class="blog-item-tag">标签一</router-link>
-            <router-link to="/category" class="blog-item-tag">标签二</router-link>
-            <router-link to="/category" class="blog-item-tag">标签三</router-link>
-        </div>
-    </li>
-</template>
-
-<script>
-export default {
-    data() {
-        return {
-
-        }
-    }
-
-    
-}
-</script>
-
-<style>
+<style scoped>
 .blog-item {
     background-color: #ffffff;
     margin-bottom: 25px;
@@ -120,3 +88,35 @@ export default {
 
 
 </style>
+
+<template>
+    <li class="blog-item">
+        <router-link to="/blog" class="blog-item-url">文章标题文章标题文章标题文章标题文章标题</router-link>
+        <div class="blog-item-author">
+            <img class="blog-item-author-img" src="../static/images/20160921_IMG_2989.jpg">
+            <span class="blog-item-author-name">作者1</span>
+            <span class="blog-item-author-date">2017-10-20</span>
+        </div>
+        <div class="blog-item-desc">
+            <p>世事茫茫，光阴有限，算来何必奔忙？人生碌碌，竞短论长，却不道荣枯有数，得失难量。看那秋风金谷，夜月乌江，阿房宫冷，铜雀台荒，荣华花上露，富贵草头霜。机关参透，万虑皆忘，夸什么龙楼凤阁，说什么利锁名僵。闲来静处，且将诗酒猖狂，唱一曲归来未晚，歌一调湖海茫茫。逢时遇景，拾翠寻芳。</p>
+        </div>
+        <div class="blog-item-tags">
+            <span class="title iconfont icon-tag"></span>
+            <router-link to="/category" class="blog-item-tag">标签一</router-link>
+            <router-link to="/category" class="blog-item-tag">标签二</router-link>
+            <router-link to="/category" class="blog-item-tag">标签三</router-link>
+        </div>
+    </li>
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+
+        }
+    }
+
+    
+}
+</script>

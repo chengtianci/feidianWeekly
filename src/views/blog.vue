@@ -1,35 +1,3 @@
-<template>
-    <wrapper>
-        <div class="blog">
-            <div class="blog-container">
-                <h1 class="blog-title">标题</h1>
-                <p class="blog-info">作者 2017年12月12日</p>
-                <div class="blog-content">
-                    内容 markdown
-                </div>
-            </div>
-            <weeklyList></weeklyList>
-        </div>
-    </wrapper>
-</template>
-
-<script>
-import wrapper from '../components/wrapper.vue';
-import weeklyList from '../components/weeklyList.vue';
-
-export default {
-    components: {
-        wrapper,
-        weeklyList
-    },
-    data() {
-        return {
-            
-        }
-    }
-}
-</script>
-
 <style>
     .blog {
         width: 100%;
@@ -69,3 +37,34 @@ export default {
     }
 </style>
 
+<template>
+    <wrapper>
+        <div class="blog">
+            <div class="blog-container">
+                <h1 class="blog-title">标题</h1>
+                <p class="blog-info">作者 2017年12月12日</p>
+                <div class="blog-content">
+                    内容 markdown
+                </div>
+            </div>
+            <weeklyList></weeklyList>
+        </div>
+    </wrapper>
+</template>
+
+<script>
+import wrapper from '../components/wrapper.vue';
+import weeklyList from '../components/weeklyList.vue';
+
+export default {
+    components: {
+        wrapper,
+        weeklyList
+    },
+    data() {
+        return {
+            
+        }
+    }
+}
+</script>

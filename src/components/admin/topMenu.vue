@@ -42,12 +42,5 @@ export default {
 
 
 <style>
-.top-menu {
-    position: fixed;
-    width: 100%;
-    height: 50px;
-    top: 0;
-    left: 0;
-    padding-left: 150px;
-}
+
 </style>

@@ -1,3 +1,8 @@
+<style scoped>
+	@import '../styles/home.css';
+</style>
+
+
 <template>
 	<wrapper>
 		<div class="home">
@@ -19,7 +24,6 @@
 import wrapper from '../components/wrapper.vue';
 import blogItem from '../components/blogItem.vue';
 import weeklyList from '../components/weeklyList.vue';
-import '../styles/home.css';
 
 export default {
 	components: {

@@ -1,3 +1,8 @@
+<style scoped>
+	@import '../styles/nav.css';
+	@import '../styles/header.css';
+</style>
+
 <template>
 	<div>
 		<nav class="nav">
@@ -33,9 +38,6 @@
 </template>
 
 <script>
-import '../styles/nav.css';
-import '../styles/header.css';
-
 export default {
     data() {
         return {
