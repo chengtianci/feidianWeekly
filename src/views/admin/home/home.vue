@@ -3,7 +3,7 @@
 </style>
 <template>
     <div class="home-main">
-        233
+        home
     </div>
 </template>
 
