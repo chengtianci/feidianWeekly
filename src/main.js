@@ -16,6 +16,14 @@ const RouterConfig = {
 }
 const router = new VueRouter(RouterConfig);
 
+router.beforeEach((to, from, next) => {
+	// console.log("to")
+	// console.log(to)
+	// console.log("from")
+	// console.log(from)
+	next()
+})
+
 new Vue({
 	el: '#root',
 	router: router,
