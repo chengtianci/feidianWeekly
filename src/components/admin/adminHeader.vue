@@ -39,7 +39,7 @@
                 <BreadcrumbItem to="/">
                     Home
                 </BreadcrumbItem>
-                <BreadcrumbItem to="/components/breadcrumb">
+                <BreadcrumbItem to="/admin/home">
                     Components
                 </BreadcrumbItem>
                 <BreadcrumbItem>

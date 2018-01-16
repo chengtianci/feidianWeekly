@@ -38,13 +38,11 @@
         },
         methods: {
             selectMenu(name) {
-                console.log(name)
-                console.log(this.$route)
-                this.$router.push({ path: name })
+                this.$router.push({ name: name })
             },
         },
         mounted: function() {
-            console.log(this.$route)
+            // console.log(this.$route)
         }
     }
 </script>
