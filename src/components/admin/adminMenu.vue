@@ -1,6 +1,6 @@
 <template>
     <Menu ref="menu" :active-name="activeName" :open-names="openNames" 
-    :theme="config.theme" :accordion="config.accordion" @on-select="selectMenu"
+    :theme="config.theme" :accordion="config.accordion" @on-select="selectMenu" @on-open-change="openMenu"
     width="auto" class="menu-item">
         <template v-for="route in adminRoutes">
             <div v-if="!route.children" :key="route.name">
@@ -28,21 +28,28 @@
         data () {
             return {
                 config: {
-                    accordion: true,
+                    accordion: false,
                     theme: 'dark',
                 },
                 adminRoutes: adminRoutes,
-                activeName: 'home',
+                activeName: 'adminHome',
                 openNames: []
             }
         },
         methods: {
             selectMenu(name) {
                 this.$router.push({ name: name })
+                this.activeName = name;
+                console.log("active: " + this.activeName)
             },
+            openMenu(names) {
+                this.openNames = names;
+            }
         },
-        mounted: function() {
-            // console.log(this.$route)
+        mounted() {
+            console.log("mounted active: " + this.activeName)
+        },
+        created() {
         }
     }
 </script>

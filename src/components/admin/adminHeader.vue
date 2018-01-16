@@ -35,37 +35,31 @@
         <Icon class="menu-icon" type="navicon-round" size="24"
                 @click.native="toggle"></Icon>
         <div class="header-crumb">
-            <Breadcrumb>
-                <BreadcrumbItem to="/">
-                    Home
-                </BreadcrumbItem>
-                <BreadcrumbItem to="/admin/home">
-                    Components
-                </BreadcrumbItem>
-                <BreadcrumbItem>
-                    Breadcrumb
-                </BreadcrumbItem>
-            </Breadcrumb>
+            <crumb></crumb>
         </div>
-        <Menu class="top-menu" mode="horizontal" active-name="1">
-            <Submenu name="1">
+        <Menu class="top-menu" mode="horizontal">
+            <Submenu name="person">
                 <template slot="title">
                     个人中心
                 </template>
-                <MenuItem name="1-1">个人中心</MenuItem>
-                <MenuItem name="1-2">退出登录</MenuItem>
+                <MenuItem name="logout">退出登录</MenuItem>
             </Submenu>
         </Menu>
     </Header>
 </template>
 
 <script>
+import crumb from '@/components/admin/crumb.vue';
 export default {
+    components: {
+        crumb
+    },
     props: {
         toggle: Function
     },
     methods: {
         
-    }
+    },
+    
 }
 </script>

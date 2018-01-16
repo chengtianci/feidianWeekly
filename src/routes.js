@@ -37,7 +37,7 @@ export const adminRoutes = [
 				component: (resolve) => require(['./views/admin/blogManager/blogList.vue'], resolve)
 			},
 			{
-				path: 'newBlog', name: 'newBlog1',
+				path: 'newBlog', name: 'newBlog',
 				title: '发布博客',
 				component: (resolve) => require(['./views/admin/blogManager/newBlog.vue'], resolve)
 			}
