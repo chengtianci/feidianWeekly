@@ -1,12 +1,12 @@
 export const adminRoutes = [
 	{
 		path: 'home', name: 'adminHome', 
-		title: '后台首页', icon: 'ios-paper',
+		title: '后台首页', icon: 'ios-home',
 		component: (resolve) => require(['./views/admin/home/home.vue'], resolve)
 	},
 	{
 		path: 'classifyManager', name: 'classifyManager',
-		title: '分类管理', icon: 'ios-paper',
+		title: '分类管理', icon: 'pricetags',
 		component: (resolve) => require(['./views/admin/manager.vue'], resolve),
 		children: [
 			{
@@ -28,7 +28,7 @@ export const adminRoutes = [
 	},
 	{
 		path: 'blogManager', name: 'blogManager',
-		title: '博客管理', icon: 'ios-people',
+		title: '博客管理', icon: 'ios-paper',
 		component: (resolve) => require(['./views/admin/manager.vue'], resolve),
 		children: [
 			{
@@ -45,7 +45,7 @@ export const adminRoutes = [
 	},
 	{
 		path: 'weeklyManager', name: 'weeklyManager',
-		title: '周刊管理', icon: 'ios-people',
+		title: '周刊管理', icon: 'ios-book',
 		component: (resolve) => require(['./views/admin/manager.vue'], resolve),
 		children: [
 			{
@@ -67,7 +67,7 @@ export const adminRoutes = [
 	},
 	{
 		path: 'systemAnalysis', name: 'systemAnalysis',
-		title: '系统分析', icon: 'ios-people',
+		title: '系统分析', icon: 'ios-pulse-strong',
 		component: (resolve) => require(['./views/admin/manager.vue'], resolve),
 		children: [
 			{

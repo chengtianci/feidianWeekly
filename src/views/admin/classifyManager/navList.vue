@@ -4,7 +4,13 @@
 
 <template>
     <div>
-        nav
+        <Row>
+            <Col span="24">
+                <Card>
+                    nav
+                </Card>
+            </Col>
+        </Row>
     </div>
 </template>
 

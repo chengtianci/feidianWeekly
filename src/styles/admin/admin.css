@@ -1,0 +1,113 @@
+#admin {
+    width: 100%;
+    height: 100%;
+    background: #f5f7f9;
+    position: relative;
+    overflow: auto;
+}
+
+.sidebar-menu {
+    height: 100%;
+    background: rgb(73, 80, 96);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    overflow: auto;
+
+    &::-webkit-scrollbar-track {
+        border: 0px;
+        background-color: transparent;
+        margin-top: 0px;
+        margin-left: 10px;
+    }
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #aaa;	
+        border-radius: 3px;
+    }
+
+
+    .logo-con {
+        padding: 8px;
+        text-align: center;
+        img {
+            height: 44px;
+            width: auto;
+        }
+    }
+
+    .menu-item span{
+        display: inline-block;
+        overflow: hidden;
+        width: 69px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        vertical-align: bottom;
+        transition: width .2s ease .2s;
+    }
+    .menu-item i{
+        transform: translateX(0px);
+        transition: font-size .2s ease, transform .2s ease;
+        vertical-align: middle;
+        font-size: 16px;
+    }
+}
+
+.admin-main {
+    position: relative;
+    left: 0px;
+    top: 0;
+    padding-left: 200px;
+    transition: padding .2s;
+    background: #f0f0f0;
+
+    .admin-header{
+        background: #fff;
+        box-shadow: 0 1px 1px rgba(0,0,0,.1);
+        padding: 0;
+        position: relative;
+
+        .menu-icon{
+            margin: 20px 20px 0;
+            transition: all .3s;
+        }
+        
+        .header-crumb {
+            position: absolute;
+            left: 60px;
+            top: 0;
+            
+        }
+
+        .top-menu {
+            width: 150px;
+            height: 64px;
+            float: right;
+        }
+        .top-menu:after {
+            height: 0;
+            background: #fff;
+        }
+    }
+    .single-page {
+        margin: 20px;
+        height: calc(100% - 64px);
+        overflow: auto;
+    }
+}
+.expend-main {
+    padding-left: 0;
+}
+
+.layout-logo-left{
+    width: 90%;
+    height: 30px;
+    background: #5b6270;
+    border-radius: 3px;
+    margin: 15px auto;
+} 
