@@ -13,17 +13,23 @@
     }
 
     .blog-item-url {
-        font-size: 35px;
-        
+        font-size: 30px;
+        width:100%;
+        text-overflow: ellipsis;
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+
         &:hover {
-            color: #666;
+            color: #EF8702;
+            text-decoration: underline;
         }
     }
 
     .blog-item-author {
         margin-top: 5px;
         padding-top: 5px;
-        border-top: 1px solid #999;
+        border-top: 1px dashed #999;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
@@ -81,6 +87,11 @@
             font-size: 0.5rem;
             border: 1px solid #999;
             color: #666;
+
+            &:hover {
+                border-color:#2d8cf0;
+                color:#2d8cf0;
+            };
         }
 
     }
@@ -91,7 +102,7 @@
 
 <template>
     <li class="blog-item">
-        <router-link to="/blog" class="blog-item-url">文章标题文章标题文章标题文章标题文章标题</router-link>
+        <router-link to="/blog" class="blog-item-url">文章标题文章标题文章标题文章标题文章标题标题文章标题标题文章标题</router-link>
         <div class="blog-item-author">
             <img class="blog-item-author-img" src="../static/images/20160921_IMG_2989.jpg">
             <span class="blog-item-author-name">作者1</span>
